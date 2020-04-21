@@ -3,6 +3,12 @@ import './emotion_index.css'
 import EmotionIndexItem from './emotion_index_item'
 
 class MainPage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  
   render() {
 
     // const allEmotions = emotions.map(emotion => (
