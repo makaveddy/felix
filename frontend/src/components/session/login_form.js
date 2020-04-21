@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -45,6 +46,11 @@ class LoginForm extends React.Component {
     };
 
     this.props.login(user);
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.props.login({ username: "demo_user", password: "starwars" });
   }
 
   // Render the session errors if there are any
@@ -87,10 +93,11 @@ class LoginForm extends React.Component {
             />
 
             <button className="button session-submit">Log in</button>
+            <button className="button session-demo" onClick={this.demoLogin}>Demo Log in</button>
 
             <div>{this.renderErrors()}</div>
 
-            <Link to="/login">
+            <Link to="/signup">
               <footer className="session-form-content-footer">
                 Not on Felix? Sign up
               </footer>

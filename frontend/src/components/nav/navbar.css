@@ -9,12 +9,14 @@
   z-index: 1;
 }
 
-.nav-container div {
-  padding: 16px;
+.nav-logo span {
+  margin-left: -16px;
+  font-size: 24px;
+  letter-spacing: 1.5px;
 }
 
-.nav-title {
-  font-size:32px;
+.nav-container div {
+  padding: 16px;
 }
 
 .nav-logout button {
