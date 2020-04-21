@@ -1,0 +1,54 @@
+.emotion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 56px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(38, 38, 38)
+}
+
+.main-header {
+  position: relative;
+  top: 120px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.emotion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: relative;
+  top: 72px;
+  width: 75%;
+  height: 75%;
+}
+
+.emotion-index-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px;
+}
+
+.emotion-index-item-container:hover {
+  filter: brightness(90%);
+}
+
+.emotion-index-item-image {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background-color: green;
+  overflow: hidden;
+  margin-bottom: 8px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.emotion-index-item-image img {
+  width: 100%;
+}

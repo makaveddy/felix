@@ -1,5 +1,7 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import './session.css';
+import Logo from "./felix_logo.png";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -50,7 +52,9 @@ class LoginForm extends React.Component {
     return (
       <ul>
         {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
+          <li className="error" key={`error-${i}`}>
+            {this.state.errors[error]}
+          </li>
         ))}
       </ul>
     );
@@ -58,30 +62,48 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
+      <div className="session-container">
+        <form className="session-form-box" onSubmit={this.handleSubmit}>
+          <div className="session-form-content">
+            <header className="session-form-header">
+              <img src={Logo} alt="Felix logo" className="logo" />
+              <h1>Welcome to Felix</h1>
+            </header>
+
             <input
+              className="input"
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="Username"
             />
-            <br />
+
             <input
+              className="input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+
+            <button className="button session-submit">Log in</button>
+
+            <div>{this.renderErrors()}</div>
+
+            <Link to="/login">
+              <footer className="session-form-content-footer">
+                Not on Felix? Sign up
+              </footer>
+            </Link>
           </div>
         </form>
+        <a href="https://github.com/makaveddy/felix" className="session-links">
+          GitHub
+        </a>
       </div>
     );
   }
 }
 
 export default withRouter(LoginForm);
+
