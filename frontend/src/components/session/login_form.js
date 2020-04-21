@@ -97,7 +97,6 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
-        <img src="http://s3.amazonaws.com/felixgroupmern/appacademylogo.png" alt="" />
         <a href="https://github.com/makaveddy/felix" className="session-links">
           GitHub
         </a>
