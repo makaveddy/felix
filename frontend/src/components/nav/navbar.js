@@ -46,11 +46,9 @@ class NavBar extends React.Component {
         <div className="nav-logo">
           <Link to="/">
             <img className="logo-small" src={Logo} alt="Felix logo" />
+            <span>elix</span>
           </Link>
         </div>
-        <Link to="/">
-          <div className="nav-title">Felix</div>
-        </Link>
         <div className="nav-logout">
           <Link to={`/profile`}><button>{user.username}</button></Link> 
           <button onClick={this.logoutUser}>Logout</button>
