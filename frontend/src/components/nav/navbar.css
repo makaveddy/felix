@@ -1,0 +1,24 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  background-color: rgb(32, 32, 32);
+  z-index: 1;
+}
+
+.nav-container div {
+  padding: 16px;
+}
+
+.nav-title {
+  font-size:32px;
+}
+
+.nav-logout button {
+  margin-left: 16px;
+  background-color: rgb(226, 226, 226);
+  color: black;
+}

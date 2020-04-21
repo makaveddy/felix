@@ -1,0 +1,43 @@
+.logo-small {
+  width: 36px;
+  height: auto;
+}
+
+.logo {
+  width: 56px;
+  height: auto;
+}
+
+.input {
+  outline: none;
+  border: 2px solid transparent;
+  padding: 6px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+}
+
+.input:hover, 
+.input:focus {
+  border: 2px solid rgb(167, 167, 167)
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 24px;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.error {
+  display: block;
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+}
