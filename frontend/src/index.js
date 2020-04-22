@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import axios from "axios";
 
 // We will create this component shortly
 import Root from "./components/root";
@@ -49,6 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // Render our root component and pass in the store as a prop
   const root = document.getElementById("root");
+
+  //TESTING
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    window.axios = axios;
+  //TESTING
 
   ReactDOM.render(<Root store={store} />, root);
 });

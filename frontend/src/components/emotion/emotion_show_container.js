@@ -1,19 +1,17 @@
 import { connect } from "react-redux";
-import { fetchEmotion } from "../../actions/pin_actions";
-import PinShow from "./pin_show";
-import { openModal } from "../../actions/modal_actions";
+// import { fetchEmotion } from "../../actions/emotion_actions";
+import EmotionShow from "./emotion_show";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pin: state.entities.pins[ownProps.match.params.pinId],
-    boards: state.entities.boards,
-    currentUser: state.session.currentUser,
+    // pin: state.entities.pins[ownProps.match.params.pinId],
+    // boards: state.entities.boards,
+    // currentUser: state.session.currentUser,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchPin: (pinId) => dispatch(fetchPin(pinId)),
-  openModal: (modal) => dispatch(openModal(modal)),
+  // fetchEmotion: (EmotionId) => dispatch(fetchEmotion(emotionId)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PinShow);
+export default connect(mapStateToProps, mapDispatchToProps)(EmotionShow);
