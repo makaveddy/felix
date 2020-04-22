@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import axios from 'axios';
+import axios from "axios";
 
 // We will create this component shortly
 import Root from "./components/root";
@@ -16,7 +16,6 @@ import { setAuthToken } from "./util/session_api_util";
 
 // We have not created this action yet, but will do so in the next step
 import { logout } from "./actions/session_actions";
-
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -50,7 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // Render our root component and pass in the store as a prop
   const root = document.getElementById("root");
-  window.axios = axios
+
+  //TESTING
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.axios = axios;
+  //TESTING
 
   ReactDOM.render(<Root store={store} />, root);
 });
