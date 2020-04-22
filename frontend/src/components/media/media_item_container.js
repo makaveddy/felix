@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-// import { fetchMedia } from "../../actions/media_actions";
+// import { getMedia } from "../../actions/media_actions";
 import MediaItem from './media_item'
 import { openModal } from "../../actions/modal_actions";
 

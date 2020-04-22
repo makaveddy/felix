@@ -7,6 +7,11 @@ class EmotionShow extends React.Component {
   constructor(props) {
     super(props)
     
+    
+  }
+
+  componentWillMount() {
+    this.props.getEmotion(this.props.emotion.id);
   }
 
   render() {
@@ -17,7 +22,7 @@ class EmotionShow extends React.Component {
 
     return (
       <div className="emotion-show-container">
-        <h1 className="emotion-show-header">Emotion</h1>
+        <h1 className="emotion-show-header">{this.props.emotion.name}</h1>
         <div className="emotion-show-content">
 
           <div className="emotion-show-media">
