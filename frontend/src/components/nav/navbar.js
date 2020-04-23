@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import Logo from "./felix_logo.png";
 import './navbar.css';
-
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -50,7 +49,8 @@ class NavBar extends React.Component {
           </Link>
         </div>
         <div className="nav-logout">
-          <Link to={`/profile`}><button>{user.username}</button></Link> 
+          <button onClick={() => this.props.history.push("/profile")}>{user.username}</button>
+
           <button onClick={this.logoutUser}>Logout</button>
         </div>
       </div>
@@ -58,5 +58,6 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
+// export default NavBar;
 
