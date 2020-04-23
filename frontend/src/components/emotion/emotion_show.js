@@ -40,7 +40,7 @@ class EmotionShow extends React.Component {
         <div className="emotion-show-content">
 
           <div className="emotion-show-media">
-            <h2 className="emotion-show-media-title">Video</h2>
+            <h2 className="emotion-show-media-title">Media</h2>
             <div className="emotion-show-underline"></div>
             <div className="emotion-show-media-items">
               {allMedia}

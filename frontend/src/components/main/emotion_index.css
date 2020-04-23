@@ -39,14 +39,44 @@
   filter: brightness(90%);
 }
 
-.emotion-index-item-image {
-  width: 136px;
-  height: 136px;
-  border-radius: 50%;
-  background-color: green;
-  overflow: hidden;
-  margin-bottom: 8px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+.far {
+  font-size: 124px;
+  margin-bottom: 12px;
+}
+
+.far:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.fa-smile {
+  background: -webkit-linear-gradient(#fce747, #c67928);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-sad-tear {
+  background: -webkit-linear-gradient(#0098d0, #2042c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-angry {
+  background: -webkit-linear-gradient(#8f0f0f, #b56107);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-flushed {
+  background: -webkit-linear-gradient(#02ac2c, #036116);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-laugh-beam {
+  background: -webkit-linear-gradient(#7639d8c5, #a089c596);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .emotion-index-item-image img {
