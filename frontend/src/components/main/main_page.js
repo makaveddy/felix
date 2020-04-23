@@ -28,11 +28,6 @@ class MainPage extends React.Component {
         <h1 className='main-header'>How would you like to feel today?</h1>
         <div className="emotion">
           {allEmotions}
-          {/* <EmotionIndexItem />
-          <EmotionIndexItem />
-          <EmotionIndexItem />
-          <EmotionIndexItem />
-          <EmotionIndexItem /> */}
         </div>
       </div>
     );
