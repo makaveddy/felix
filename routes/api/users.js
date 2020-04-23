@@ -22,6 +22,23 @@ router.get("/current",passport.authenticate("jwt", { session: false }), (req, re
   }
 );
 
+
+router.put("/:id", (req, res) => {
+  User.findById(req.params.id) 
+    .then((user) => {
+      user.favorites = req.body.favorites;
+      user.save().then((user) => {
+        const payload = {
+          id: user.id,
+          username: user.username,
+          favorites: user.favorites
+        };
+        return res.json(payload);
+      });
+    }) 
+    .catch((err) => res.status(404).json({ nouserfound: "No user found" }));
+});
+
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
@@ -59,6 +76,7 @@ router.post("/register", (req, res) => {
                             const payload = {
                               id: user.id,
                               username: user.username,
+                              favorites: user.favorites
                             };
 
                             jwt.sign(
