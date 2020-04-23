@@ -1,9 +1,9 @@
 const Emotion = require("../models/Emotion");
 const mongoose = require("mongoose");
-const db = require("../config/keys_dev").mongoURI;
+// const db = require("../config/keys_dev").mongoURI;
 
-mongoose
-    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose
+//     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const emotions = [
     new Emotion({
