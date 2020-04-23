@@ -40,9 +40,10 @@
 
 .emotion-show-media-items {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .emotion-show-media-items div {
-  margin-right: 56px;
+  margin-right: 64px;
 }

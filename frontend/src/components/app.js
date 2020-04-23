@@ -8,6 +8,7 @@ import MainPageContainer from "./main/main_page_container";
 import EmotionShowContainer from './emotion/emotion_show_container'
 import ProfileContainer from './profile/profile_container';
 import Modal from "./modal/modal";
+import MediaItemContainer from './media/media_item_container';
 
 const App = () => (
   <div className='app'>
@@ -17,10 +18,11 @@ const App = () => (
     
     <ProtectedRoute path='/' component={NavBarContainer} />
   
-  <Switch>
-    <ProtectedRoute exact path='/profile' component={ProfileContainer} />
-    <ProtectedRoute exact path='/:emotionId' component={EmotionShowContainer} />
-    <ProtectedRoute exact path='/' component={MainPageContainer} />
+    <Switch>
+      <ProtectedRoute exact path='/profile' component={ProfileContainer} />
+      <ProtectedRoute exact path='/:emotionId' component={EmotionShowContainer} />
+      <ProtectedRoute exact path='/:emotionId/media' component={MediaItemContainer} />
+      <ProtectedRoute exact path='/' component={MainPageContainer} />
     </Switch>
   </div>
 );

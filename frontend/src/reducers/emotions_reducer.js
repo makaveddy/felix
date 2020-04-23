@@ -6,7 +6,7 @@ export default (state = {}, action) => {
         case RECEIVE_EMOTIONS:
             return action.emotions;
         case RECEIVE_EMOTION:
-            debugger
+            // debugger
             // return Object.assign({}, {[action.emotion.data._id]: action.emotion});
             return action.emotion;
         default: 

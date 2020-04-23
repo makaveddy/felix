@@ -2,9 +2,6 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import Logo from "./felix_logo.png";
 import './navbar.css';
-{/* <Link to="/profile">
-  <button>{user.username}</button>
-</Link>;  */}
 
 class NavBar extends React.Component {
   constructor(props) {

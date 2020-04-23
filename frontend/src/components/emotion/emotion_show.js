@@ -15,19 +15,24 @@ class EmotionShow extends React.Component {
   }
 
   render() {
+    debugger
 
-    //const allMedia = medias.map(media => (
-    //   <MediaItem key={mediaitem.id} media={media} />
-    // ))
-    // debugger
-
+    
     if (typeof this.props.emotion === "undefined") {
       return null;
     } 
-
+    
     if (typeof this.props.emotion.data === "undefined") {
       return null;
     } 
+
+    if (typeof this.props.emotion.data.contents === "undefined") {
+      return null;
+    } 
+
+    const allMedia = this.props.emotion.data.contents.map((media) => (
+      <MediaItem key={media.id} media={media} />
+    ));
 
     return (
       <div className="emotion-show-container">
@@ -38,20 +43,7 @@ class EmotionShow extends React.Component {
             <h2 className="emotion-show-media-title">Video</h2>
             <div className="emotion-show-underline"></div>
             <div className="emotion-show-media-items">
-              <MediaItem />
-              <MediaItem />
-              <MediaItem />
-            </div>
-          </div>
-
-          <div className="emotion-show-media">
-            <h2 className="emotion-show-media-title">Audio</h2>
-            <div className="emotion-show-underline"></div>
-            <div className="emotion-show-media-items">
-              <div>audioitem</div>
-              <div>audioitem</div>
-              <div>audioitem</div>
-              <div>audioitem</div>
+              {allMedia}
             </div>
           </div>
         </div>
