@@ -17,10 +17,11 @@ const App = () => (
     
     <ProtectedRoute path='/' component={NavBarContainer} />
   
-    <ProtectedRoute exact path='/:emotionId' component={EmotionShowContainer} />
+  <Switch>
     <ProtectedRoute exact path='/profile' component={ProfileContainer} />
+    <ProtectedRoute exact path='/:emotionId' component={EmotionShowContainer} />
     <ProtectedRoute exact path='/' component={MainPageContainer} />
-    
+    </Switch>
   </div>
 );
 
