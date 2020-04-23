@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
+//testing
+import { getEmotions } from "../src/actions/emotion_actions";
+//testing
+
 // We will create this component shortly
 import Root from "./components/root";
 
@@ -56,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.axios = axios;
+    window.getEmotions = getEmotions;
   //TESTING
 
   ReactDOM.render(<Root store={store} />, root);

@@ -10,8 +10,8 @@ class EmotionShow extends React.Component {
     
   }
 
-  componentWillMount() {
-    this.props.getEmotion(this.props.emotion.id);
+  componentDidMount() {
+    this.props.getEmotion(this.props.ownProps.match.params.emotionId);
   }
 
   render() {
@@ -19,10 +19,19 @@ class EmotionShow extends React.Component {
     //const allMedia = medias.map(media => (
     //   <MediaItem key={mediaitem.id} media={media} />
     // ))
+    // debugger
+
+    if (typeof this.props.emotion === "undefined") {
+      return null;
+    } 
+
+    if (typeof this.props.emotion.data === "undefined") {
+      return null;
+    } 
 
     return (
       <div className="emotion-show-container">
-        <h1 className="emotion-show-header">{this.props.emotion.name}</h1>
+        <h1 className="emotion-show-header">{this.props.emotion.data.name}</h1>
         <div className="emotion-show-content">
 
           <div className="emotion-show-media">

@@ -7,24 +7,32 @@ class MainPage extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.getEmotions();
+  }
 
-  
   render() {
+    // debugger
+    if (typeof this.props.emotions.data === 'undefined' ) {
+      return null
+    } 
 
-    // const allEmotions = emotions.map(emotion => (
-    //   <EmotionIndexItem key={emotion.id} emotion={emotion} />
-    // ))
+    const allEmotions = Object.values(this.props.emotions.data).map(emotion => (
+      <EmotionIndexItem key={emotion._id} emotion={emotion} />
+    ))
+
+    // debugger
 
     return (
       <div className="emotion-container">
         <h1 className='main-header'>How would you like to feel today?</h1>
         <div className="emotion">
-          {/* {AllEmotions} */}
+          {allEmotions}
+          {/* <EmotionIndexItem />
           <EmotionIndexItem />
           <EmotionIndexItem />
           <EmotionIndexItem />
-          <EmotionIndexItem />
-          <EmotionIndexItem />
+          <EmotionIndexItem /> */}
         </div>
       </div>
     );

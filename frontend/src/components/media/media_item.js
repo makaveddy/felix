@@ -9,7 +9,6 @@ class MediaItem extends React.Component {
   }
 
   render () {
-    debugger
     return (
       <div className="media-item-container" onClick={() => this.props.openModal("view")}>
         <div className='media-item-preview'>
