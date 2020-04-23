@@ -21,7 +21,6 @@ import { setAuthToken } from "./util/session_api_util";
 // We have not created this action yet, but will do so in the next step
 import { logout } from "./actions/session_actions";
 
-
 document.addEventListener("DOMContentLoaded", () => {
   let store;
 
@@ -57,10 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.axios = axios;
 
   //TESTING
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    window.axios = axios;
-    window.getEmotions = getEmotions;
+
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.axios = axios;
+
   //TESTING
 
   ReactDOM.render(<Root store={store} />, root);
