@@ -1,4 +1,4 @@
-.profile-show-container {
+.profile-container {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -8,13 +8,13 @@
   background-color: rgb(38, 38, 38);
 }
 
-.profile-show-header {
+.profile-header {
   position: relative;
   top: 100px;
   font-size: 36px;
 }
 
-.profile-show-content {
+.profile-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,26 +24,27 @@
 }
 
 
-.profile-show-media {
+.profile-media {
   width: 90%;
-  /* margin-bottom: 12px; */
+  margin-bottom: 32px;
 }
 
-.profile-show-media h2 {
+.profile-media-title {
   font-size: 28px;
 }
 
-.profile-show-underline {
+.profile-underline {
   border-top: 1px solid rgb(100, 100, 100);
   margin-bottom: 24px;
 }
 
-.profile-show-media-items {
+.profile-media-items {
   display: flex;
   justify-content: flex-start;
+  overflow: scroll;
 }
 
-.profile-show-media-item {
+.profile-media-item {
   filter: brightness(90%);
   cursor: pointer;
 }

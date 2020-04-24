@@ -80,47 +80,47 @@ class Profile extends React.Component {
     const motivatedHide = motivatedFavorites.length ? '' : 'hide';
 
     return (
-      <div className="profile-show-container">
-        <h1 className="profile-show-header">{this.props.user.username}</h1>
+      <div className="profile-container">
+        <h1 className="profile-header">{this.props.user.username}</h1>
 
-        <div className='profile-show-content'>
+        <div className='profile-content'>
 
-          <div className={`profile-show-media ${happyHide}`}>
-            <h2 className="profile-show-media-title">Happy</h2>
-            <div className="profile-show-underline"></div>
-            <div className="profile-show-media-items">
+          <div className={`profile-media ${happyHide}`}>
+            <h2 className="profile-media-title">Happy</h2>
+            <div className="profile-underline"></div>
+            <div className="profile-media-items">
               {happyFavorites}
             </div>
           </div>
 
-          <div className={`profile-show-media ${sadHide}`}>
-            <h2 className="profile-show-media-title">Sad</h2>
-            <div className="profile-show-underline"></div>
-            <div className="profile-show-media-items">
+          <div className={`profile-media ${sadHide}`}>
+            <h2 className="profile-media-title">Sad</h2>
+            <div className="profile-underline"></div>
+            <div className="profile-media-items">
               {sadFavorites}
             </div>
           </div>
 
-          <div className={`profile-show-media ${motivatedHide}`}>
-            <h2 className="profile-show-media-title">Motivated</h2>
-            <div className="profile-show-underline"></div>
-            <div className="profile-show-media-items">
+          <div className={`profile-media ${motivatedHide}`}>
+            <h2 className="profile-media-title">Motivated</h2>
+            <div className="profile-underline"></div>
+            <div className="profile-media-items">
               {motivatedFavorites}
             </div>
           </div>
 
-          <div className={`profile-show-media ${fearfulHide}`}>
-            <h2 className="profile-show-media-title">Fearful</h2>
-            <div className="profile-show-underline"></div>
-            <div className="profile-show-media-items">
+          <div className={`profile-media ${fearfulHide}`}>
+            <h2 className="profile-media-title">Fearful</h2>
+            <div className="profile-underline"></div>
+            <div className="profile-media-items">
               {fearfulFavorites}
             </div>
           </div>
 
-          <div className={`profile-show-media ${angryHide}`}>
-            <h2 className="profile-show-media-title">Angry</h2>
-            <div className="profile-show-underline"></div>
-            <div className="profile-show-media-items">
+          <div className={`profile-media ${angryHide}`}>
+            <h2 className="profile-media-title">Angry</h2>
+            <div className="profile-underline"></div>
+            <div className="profile-media-items">
               {angryFavorites}
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import '../media/media_item.css';
+import './favorite_item.css';
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
 
@@ -23,8 +23,8 @@ class FavoriteItem extends React.Component {
 
 
     return (
-      <div className="media-item-container">
-        <div className="media-item-preview">
+      <div className="favorite-item-container">
+        <div className="favorite-item-preview">
           <ReactPlayer
             url={this.props.favorite.contentUrl}
             width="100%"
@@ -36,12 +36,12 @@ class FavoriteItem extends React.Component {
           />
         </div>
         {/* <ReactAudioPlayer 
-            src={this.props.media.url}
+            src={this.props.favorite.url}
             controls
             volume
           /> */}
-        <div className='media-item-info'>
-          <div className="media-item-title">
+        <div className='favorite-item-info'>
+          <div className="favorite-item-title">
             {this.props.favorite.contentTitle}
           </div>
           <i className="far fa-heart red" onClick={this.handleUnfavorite}></i>
