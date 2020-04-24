@@ -74,8 +74,10 @@ class MediaItem extends React.Component {
             controls
             volume
           /> */}
-        <div className="media-item-title">{this.props.media.title}</div>
+        <div className='media-item-info'>
+          <div div className="media-item-title">{this.props.media.title}</div>
           <i onClick={this.handleFavorite} className={`far fa-heart ${favoriteButton}`}></i>
+        </div>
       </div>
     );
   }

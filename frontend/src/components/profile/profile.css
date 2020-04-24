@@ -43,10 +43,6 @@
   justify-content: flex-start;
 }
 
-.profile-show-media-items > div {
-  margin-right: 56px;
-}
-
 .profile-show-media-item {
   filter: brightness(90%);
   cursor: pointer;

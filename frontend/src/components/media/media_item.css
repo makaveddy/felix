@@ -1,10 +1,12 @@
 .media-item-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
+  flex-wrap: wrap;
   width: 280px;
   margin-bottom: 56px;
+  /* margin-right: 56px; */
 }
 
 .media-item-container:hover {
@@ -16,7 +18,7 @@
   width: 280px;
   height: 158px;
   border-radius: 8px;
-  background-color: green;
+  /* background-color: green; */
   overflow: hidden;
   margin-bottom: 8px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
