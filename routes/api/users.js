@@ -23,21 +23,22 @@ router.get("/current",passport.authenticate("jwt", { session: false }), (req, re
 );
 
 
-router.put("/:id", (req, res) => {
-  User.findById(req.params.id) 
-    .then((user) => {
-      user.favorites = req.body.favorites;
-      user.save().then((user) => {
-        const payload = {
-          id: user.id,
-          username: user.username,
-          favorites: user.favorites
-        };
-        return res.json(payload);
-      });
-    }) 
-    .catch((err) => res.status(404).json({ nouserfound: "No user found" }));
-});
+// router.put("/:id", (req, res) => {
+//   User.findById(req.params.id)
+//     .then((user) => {
+//       const favorites = req.body.favorites;
+//       user.favorites = favorites;
+//       user.save().then((user) => {
+//         // const payload = {
+//         //   id: user.id,
+//         //   username: user.username,
+//         //   favorites: user.favorites,
+//         // };
+//         return res.json(user.favorites);
+//       });
+//     })
+//     .catch((err) => res.status(404).json({ nouserfound: "No user found" }));
+// });
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);

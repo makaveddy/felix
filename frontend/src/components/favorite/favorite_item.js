@@ -1,26 +1,20 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Logo from "./felix_logo.png";
-import './media_item.css';
+import '../media/media_item.css';
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
 
-class MediaItem extends React.Component {
+class FavoriteItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleFavorite = this.handleFavorite.bind(this);
+    this.handleUnfavorite = this.handleUnfavorite.bind(this);
   }
 
-  handleFavorite(e) {
+  handleUnfavorite(e) {
     e.preventDefault();
-    const {id, title, url, emotion} = this.props.media;
-    const userId = this.props.userId;
-    const contentId = id;
-    const contentTitle = title;
-    const contentUrl = url;
-    const contentEmotion = emotion;
     debugger
-    this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
+    const favoriteId = this.props.favorite._id
+    this.props.removeFavorite(favoriteId);
   }
 
   render () {
@@ -29,7 +23,7 @@ class MediaItem extends React.Component {
       <div className="media-item-container">
         <div className="media-item-preview">
           <ReactPlayer
-            url={this.props.media.url}
+            url={this.props.favorite.contentUrl}
             width="100%"
             height="100%"
             controls
@@ -43,11 +37,11 @@ class MediaItem extends React.Component {
             controls
             volume
           /> */}
-        <div className="media-item-title">{this.props.media.title}</div>
-        <i class="far fa-heart" onClick={this.handleFavorite}></i>
+        <div className="media-item-title">{this.props.favorite.contentTitle}</div>
+        <i class="far fa-heart" onClick={this.handleUnfavorite}></i>
       </div>
     );
   }
 }
 
-export default MediaItem;
+export default FavoriteItem;

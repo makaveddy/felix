@@ -31,7 +31,7 @@ class EmotionShow extends React.Component {
     } 
 
     const allMedia = this.props.emotion.data.contents.map((media) => (
-      <MediaItem key={media.id} media={media} />
+      <MediaItem key={media.id} media={media} createFavorite={this.props.createFavorite} userId={this.props.userId} />
     ));
 
     return (
