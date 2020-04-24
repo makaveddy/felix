@@ -12,6 +12,7 @@ class EmotionShow extends React.Component {
 
   componentDidMount() {
     this.props.getEmotion(this.props.ownProps.match.params.emotionId);
+    this.props.fetchFavorites(this.props.userId);
   }
 
   render() {
@@ -31,7 +32,14 @@ class EmotionShow extends React.Component {
     } 
 
     const allMedia = this.props.emotion.data.contents.map((media) => (
-      <MediaItem key={media.id} media={media} createFavorite={this.props.createFavorite} userId={this.props.userId} />
+      <MediaItem 
+        key={media.id} 
+        media={media} 
+        createFavorite={this.props.createFavorite} 
+        removeFavorite={this.props.removeFavorite} 
+        userId={this.props.userId} 
+        favorites={this.props.favorites} 
+      />
     ));
 
     return (

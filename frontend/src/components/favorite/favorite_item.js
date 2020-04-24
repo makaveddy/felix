@@ -19,6 +19,9 @@ class FavoriteItem extends React.Component {
 
   render () {
     debugger
+
+
+
     return (
       <div className="media-item-container">
         <div className="media-item-preview">
@@ -37,8 +40,12 @@ class FavoriteItem extends React.Component {
             controls
             volume
           /> */}
-        <div className="media-item-title">{this.props.favorite.contentTitle}</div>
-        <i class="far fa-heart" onClick={this.handleUnfavorite}></i>
+        <div className='media-item-info'>
+          <div className="media-item-title">
+            {this.props.favorite.contentTitle}
+          </div>
+          <i className="far fa-heart red" onClick={this.handleUnfavorite}></i>
+        </div>
       </div>
     );
   }

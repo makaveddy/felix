@@ -19,12 +19,43 @@ class MediaItem extends React.Component {
     const contentTitle = title;
     const contentUrl = url;
     const contentEmotion = emotion;
-    debugger
-    this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
-  }
 
+    let contentIds = [];
+    let favoriteIds = [];
+
+    Object.values(this.props.favorites).forEach(favorite => {
+      contentIds.push(favorite.contentId);
+      favoriteIds.push(favorite._id);
+    });
+    
+    let changeColor = '';
+    if (contentIds.includes(id)) {
+      debugger
+      const index = contentIds.indexOf(id);
+      this.props.removeFavorite(favoriteIds[index]);
+    } else {
+      this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
+    };
+  }
+  
   render () {
+
+    if (!this.props.favorites) {
+      return null;
+    }
+    
     debugger
+    const {id} = this.props.media;
+    let contentIds = [];
+    Object.values(this.props.favorites).forEach(favorite => {
+      contentIds.push(favorite.contentId);
+    });
+
+    let favoriteButton = 'gray';
+    if (contentIds.includes(id)) {
+      favoriteButton = 'red';
+    } 
+
     return (
       <div className="media-item-container">
         <div className="media-item-preview">
@@ -44,7 +75,7 @@ class MediaItem extends React.Component {
             volume
           /> */}
         <div className="media-item-title">{this.props.media.title}</div>
-        <i class="far fa-heart" onClick={this.handleFavorite}></i>
+          <i onClick={this.handleFavorite} className={`far fa-heart ${favoriteButton}`}></i>
       </div>
     );
   }

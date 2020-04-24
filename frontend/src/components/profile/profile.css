@@ -26,7 +26,7 @@
 
 .profile-show-media {
   width: 90%;
-  margin-bottom: 56px;
+  /* margin-bottom: 12px; */
 }
 
 .profile-show-media h2 {
@@ -43,7 +43,7 @@
   justify-content: flex-start;
 }
 
-.profile-show-media-items div {
+.profile-show-media-items > div {
   margin-right: 56px;
 }
 

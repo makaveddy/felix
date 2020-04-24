@@ -71,3 +71,26 @@ body {
 .hide {
   display: none;
 }
+
+.fa-heart {
+  font-size: 24px;
+  color: rgb(85, 85, 85);
+}
+
+.fa-heart:hover {
+  background: -webkit-linear-gradient(#c9165a, #550e0e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(100%);
+}
+
+.red {
+  background: -webkit-linear-gradient(#c9165a, #550e0e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(100%);
+}
+
+.gray {
+  color: rgb(85, 85, 85);
+}
