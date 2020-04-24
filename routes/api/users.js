@@ -9,7 +9,7 @@ const passport = require("passport");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
-router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
+// router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
 
 //auth route
@@ -21,6 +21,24 @@ router.get("/current",passport.authenticate("jwt", { session: false }), (req, re
     });
   }
 );
+
+
+// router.put("/:id", (req, res) => {
+//   User.findById(req.params.id)
+//     .then((user) => {
+//       const favorites = req.body.favorites;
+//       user.favorites = favorites;
+//       user.save().then((user) => {
+//         // const payload = {
+//         //   id: user.id,
+//         //   username: user.username,
+//         //   favorites: user.favorites,
+//         // };
+//         return res.json(user.favorites);
+//       });
+//     })
+//     .catch((err) => res.status(404).json({ nouserfound: "No user found" }));
+// });
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -59,6 +77,7 @@ router.post("/register", (req, res) => {
                             const payload = {
                               id: user.id,
                               username: user.username,
+                              favorites: user.favorites
                             };
 
                             jwt.sign(
@@ -101,7 +120,7 @@ router.post('/login', (req, res) => {
       bcrypt.compare(password, user.password)
         .then(isMatch => {
           if (isMatch) {
-            const payload = { id: user.id, username: user.username };
+            const payload = { id: user.id, username: user.username, favorites: user.favorites };
 
             jwt.sign(
               payload,

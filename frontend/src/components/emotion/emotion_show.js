@@ -12,10 +12,11 @@ class EmotionShow extends React.Component {
 
   componentDidMount() {
     this.props.getEmotion(this.props.ownProps.match.params.emotionId);
+    this.props.fetchFavorites(this.props.userId);
   }
 
   render() {
-    debugger
+    // debugger
 
     
     if (typeof this.props.emotion === "undefined") {
@@ -31,7 +32,14 @@ class EmotionShow extends React.Component {
     } 
 
     const allMedia = this.props.emotion.data.contents.map((media) => (
-      <MediaItem key={media.id} media={media} />
+      <MediaItem 
+        key={media.id} 
+        media={media} 
+        createFavorite={this.props.createFavorite} 
+        removeFavorite={this.props.removeFavorite} 
+        userId={this.props.userId} 
+        favorites={this.props.favorites} 
+      />
     ));
 
     return (
@@ -39,13 +47,15 @@ class EmotionShow extends React.Component {
         <h1 className="emotion-show-header">{this.props.emotion.data.name}</h1>
         <div className="emotion-show-content">
 
-          <div className="emotion-show-media">
+            {/* <header className='emotion-show-header'> */}
+          {/* <div className="emotion-show-media"> */}
             <h2 className="emotion-show-media-title">Media</h2>
             <div className="emotion-show-underline"></div>
+            {/* </header> */}
             <div className="emotion-show-media-items">
               {allMedia}
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     );
