@@ -16,7 +16,7 @@ class EmotionShow extends React.Component {
   }
 
   render() {
-    debugger
+    // debugger
 
     
     if (typeof this.props.emotion === "undefined") {

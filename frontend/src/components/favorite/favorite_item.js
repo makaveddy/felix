@@ -12,15 +12,13 @@ class FavoriteItem extends React.Component {
 
   handleUnfavorite(e) {
     e.preventDefault();
-    debugger
+    // debugger
     const favoriteId = this.props.favorite._id
     this.props.removeFavorite(favoriteId);
   }
 
   render () {
-    debugger
-
-
+    // debugger
 
     return (
       <div className="favorite-item-container">

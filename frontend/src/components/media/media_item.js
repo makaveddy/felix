@@ -30,7 +30,7 @@ class MediaItem extends React.Component {
     
     let changeColor = '';
     if (contentIds.includes(id)) {
-      debugger
+      // debugger
       const index = contentIds.indexOf(id);
       this.props.removeFavorite(favoriteIds[index]);
     } else {
@@ -44,7 +44,7 @@ class MediaItem extends React.Component {
       return null;
     }
     
-    debugger
+    // debugger
     const {id} = this.props.media;
     let contentIds = [];
     Object.values(this.props.favorites).forEach(favorite => {

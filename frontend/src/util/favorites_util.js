@@ -11,7 +11,7 @@ export const createFavorite = ({ userId, contentId, contentTitle, contentEmotion
 };
 
 export const removeFavorite = (favoriteId) => {
-  debugger
+  // debugger
   return axios.delete(`/api/favorites/${favoriteId}`);
 };
 
