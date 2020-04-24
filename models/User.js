@@ -15,10 +15,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  favorites: {
-    type: Array,
-    default: []
-  },
+  // favorites: {
+  //   type: {},
+  //   default: {}
+  // },
   date: {
     type: Date,
     default: Date.now,

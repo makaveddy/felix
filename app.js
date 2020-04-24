@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
 const emotions = require("./routes/api/emotions");
+const favorites = require("./routes/api/favorites")
 
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -24,6 +25,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/emotions", emotions);
+app.use("/api/favorites", favorites);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Server is running on port ${port}`)); 

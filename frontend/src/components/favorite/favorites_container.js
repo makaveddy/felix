@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import Like from "./likes";
+import Like from "./favorites";
 import {
   createLike,
   deleteLike,
   getUserLikes,
-} from "../../actions/like_actions";
+} from "../../actions/favorite_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {

@@ -1,19 +1,20 @@
-.media-item-container {
+.favorite-item-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   flex-wrap: wrap;
   width: 280px;
-  margin-bottom: 56px;
+  margin-right: 56px;
+  margin-bottom: 24px;
 }
 
-.media-item-container:hover {
+.favorite-item-container:hover {
   filter: brightness(90%);
   cursor: pointer;
 }
 
-.media-item-preview {
+.favorite-item-preview {
   width: 280px;
   height: 158px;
   border-radius: 8px;
@@ -22,14 +23,13 @@
   margin-bottom: 8px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
-.media-item-info {
+.favorite-item-info {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.media-item-title {
+.favorite-item-title {
   font-weight: 400;
 }
-
