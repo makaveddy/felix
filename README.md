@@ -31,7 +31,11 @@ Make sure you are logged in when you visit Felix so you can add those favorites!
 Adding a favorite is as easy as just making the account, choosing the emotion, then just click on the heart next to 
 the media title and thats it!
 
-(placeholder for favorites screenshots)
+![FAVORITE](https://felixgroupmern.s3.amazonaws.com/favorite.png)
+
+To view your favorites just navigate over to your profile page. You will see all your favorites sorted by its emotion category!
+
+![PROFILE](https://felixgroupmern.s3.amazonaws.com/PROFILE-FAVS.png)
 
 
 ## Technologies & Technical Challenges
@@ -43,8 +47,8 @@ Back end built on MongoDB to save user auth and user data.
 
 ## Group Members 
 
-**Eddy Flores (Team Lead)**,
-**Vivienne Van Vliet (Flex)**,
-**Aimy Yu (Backend Lead)**,
-**Karl Fleener (Frontend Lead)**
+[Eddy Flores (Team Lead)](https://github.com/makaveddy),
+[Vivienne Van Vliet (Flex)](https://github.com/cleopatra2035),
+[Aimy Yu (Backend Lead)](https://github.com/aimyaa),
+[Karl Fleener (Frontend Lead)](https://github.com/karlfleener)
 
