@@ -36,7 +36,8 @@ a {
   font-weight: 700;
 }
 
-button:hover {
+button:hover,
+a:hover {
   filter: brightness(90%);
   cursor: pointer;
 }
