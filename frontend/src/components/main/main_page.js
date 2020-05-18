@@ -12,7 +12,6 @@ class MainPage extends React.Component {
   }
 
   render() {
-    // debugger
     if (typeof this.props.emotions.data === 'undefined' ) {
       return null
     } 
@@ -20,8 +19,6 @@ class MainPage extends React.Component {
     const allEmotions = Object.values(this.props.emotions.data).map(emotion => (
       <EmotionIndexItem key={emotion._id} emotion={emotion} />
     ))
-
-    // debugger
 
     return (
       <div className="emotion-container">

@@ -52,7 +52,7 @@
 .member-details h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #C1BAA9;
-  font-size: 2em;
+  font-size: 30px;
   padding: 12px;
 }
 
@@ -61,7 +61,7 @@ p {
   padding: 12px;
   line-height: 1.5;
   font-weight: 200;
-  font-size: 1.7em;
+  font-size: 25px;
 }
 
 .social-links {
