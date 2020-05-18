@@ -3,7 +3,6 @@ import { getEmotions } from "../../actions/emotion_actions";
 import MainPage from "./main_page";
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     emotions: state.emotions,
   };

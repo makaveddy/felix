@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Logo from "./felix_logo.png";
 
 const EmotionIndexItem = ({ emotion }) => {
-  // debugger
   let icon;
   if (emotion.name === 'Happy') {icon = <i className="far fa-smile"></i>;}
   if (emotion.name === 'Sad') {icon = <i className="far fa-sad-tear"></i>;}
