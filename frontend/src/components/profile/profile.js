@@ -25,11 +25,12 @@ class Profile extends React.Component {
     let fearfulFavorites = [];  
     let motivatedFavorites = [];  
     
+    // debugger
     const allFavorites = Object.values(this.props.favorites[0]).forEach((favorite) => {
       if (favorite.contentEmotion === "Happy") {
        happyFavorites.push( 
         <FavoriteItem
-          key={favorite.id}
+          key={favorite._id}
           favorite={favorite}
           removeFavorite={this.props.removeFavorite}
         />
@@ -38,7 +39,7 @@ class Profile extends React.Component {
       if (favorite.contentEmotion === "Sad") {
         sadFavorites.push(
           <FavoriteItem
-            key={favorite.id}
+            key={favorite._id}
             favorite={favorite}
             removeFavorite={this.props.removeFavorite}
           />
@@ -47,7 +48,7 @@ class Profile extends React.Component {
       if (favorite.contentEmotion === "Angry") {
         angryFavorites.push(
           <FavoriteItem
-            key={favorite.id}
+            key={favorite._id}
             favorite={favorite}
             removeFavorite={this.props.removeFavorite}
           />
@@ -56,7 +57,7 @@ class Profile extends React.Component {
       if (favorite.contentEmotion === "Fearful") {
         fearfulFavorites.push(
           <FavoriteItem
-            key={favorite.id}
+            key={favorite._id}
             favorite={favorite}
             removeFavorite={this.props.removeFavorite}
           />
@@ -65,7 +66,7 @@ class Profile extends React.Component {
       if (favorite.contentEmotion === "Motivated") {
         motivatedFavorites.push(
           <FavoriteItem
-            key={favorite.id}
+            key={favorite._id}
             favorite={favorite}
             removeFavorite={this.props.removeFavorite}
           />

@@ -19,7 +19,8 @@
   padding: 16px;
 }
 
-.nav-logout button {
+.nav-logout button,
+.nav-logout a {
   margin-left: 16px;
   background-color: rgb(226, 226, 226);
   color: black;

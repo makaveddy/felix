@@ -49,6 +49,8 @@ class NavBar extends React.Component {
           </Link>
         </div>
         <div className="nav-logout">
+          <a href="https://github.com/makaveddy/felix" target='_blank' className="">GitHub</a>
+          <button onClick={() => this.props.history.push("/team")}>Team</button>
           <button onClick={() => this.props.history.push("/profile")}>{user.username}</button>
 
           <button onClick={this.logoutUser}>Logout</button>
