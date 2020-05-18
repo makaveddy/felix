@@ -36,11 +36,7 @@ class NavBar extends React.Component {
 
   render() {
     const { user } = this.props;
-    // debugger
     return (
-      // <div>
-      //   {this.getLinks()}
-      // </div>
       <div className="nav-container">
         <div className="nav-logo">
           <Link to="/">
@@ -52,7 +48,6 @@ class NavBar extends React.Component {
           <a href="https://github.com/makaveddy/felix" target='_blank' className="">GitHub</a>
           <button onClick={() => this.props.history.push("/team")}>Team</button>
           <button onClick={() => this.props.history.push("/profile")}>{user.username}</button>
-
           <button onClick={this.logoutUser}>Logout</button>
         </div>
       </div>

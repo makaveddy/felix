@@ -25,8 +25,11 @@ export const getEmotions = () => dispatch => (
     .catch(err => console.log(err))
 );
 
-export const getEmotion = (emotionId) => dispatch => (
+export const getEmotion = (emotionId) => dispatch => {
+    debugger
+    return (
     APIUtil.fetchEmotion(emotionId)
     .then(emotion => dispatch(receiveEmotion(emotion)))
     .catch(err => console.log(err))
-);
+    )
+};
