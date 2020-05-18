@@ -16,9 +16,7 @@ class EmotionShow extends React.Component {
   }
 
   render() {
-    // debugger
 
-    
     if (typeof this.props.emotion === "undefined") {
       return null;
     } 
@@ -47,15 +45,13 @@ class EmotionShow extends React.Component {
         <h1 className="emotion-show-header">{this.props.emotion.data.name}</h1>
         <div className="emotion-show-content">
 
-            {/* <header className='emotion-show-header'> */}
-          {/* <div className="emotion-show-media"> */}
             <h2 className="emotion-show-media-title">Media</h2>
             <div className="emotion-show-underline"></div>
-            {/* </header> */}
+
             <div className="emotion-show-media-items">
               {allMedia}
             </div>
-          {/* </div> */}
+
         </div>
       </div>
     );

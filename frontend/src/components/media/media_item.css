@@ -8,7 +8,7 @@
   margin-bottom: 56px;
 }
 
-.media-item-container:hover {
+.media-item-preview:hover {
   filter: brightness(90%);
   cursor: pointer;
 }
@@ -31,5 +31,9 @@
 
 .media-item-title {
   font-weight: 400;
+}
+
+.media-item-title {
+  cursor: default;
 }
 

@@ -9,7 +9,7 @@
   margin-bottom: 24px;
 }
 
-.favorite-item-container:hover {
+.favorite-item-preview:hover {
   filter: brightness(90%);
   cursor: pointer;
 }
@@ -32,4 +32,8 @@
 
 .favorite-item-title {
   font-weight: 400;
+}
+
+.favorite-item-title {
+  cursor: default;
 }

@@ -12,13 +12,13 @@ class FavoriteItem extends React.Component {
 
   handleUnfavorite(e) {
     e.preventDefault();
-    // debugger
+
     const favoriteId = this.props.favorite._id
     this.props.removeFavorite(favoriteId);
   }
 
   render () {
-    // debugger
+
 
     return (
       <div className="favorite-item-container">
@@ -28,16 +28,9 @@ class FavoriteItem extends React.Component {
             width="100%"
             height="100%"
             controls
-            volume
-            // light
-            // playIcon
+            volume={1}
           />
         </div>
-        {/* <ReactAudioPlayer 
-            src={this.props.favorite.url}
-            controls
-            volume
-          /> */}
         <div className='favorite-item-info'>
           <div className="favorite-item-title">
             {this.props.favorite.contentTitle}
