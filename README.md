@@ -13,18 +13,14 @@ Felix is a single-page app that provides curated selections of media to enjoy ba
 ## Background and Overview
 
 For the times when you want to boost your mood or want to experience the blues then Felix is here to help. Just choose the emotion that you want to feel and Felix will give you a selection of handpicked media to get you there!
+
 ## Dashboard
 
 ![DASH](https://felixgroupmern.s3.amazonaws.com/new-dash.png)
 
-The dashboard is the main page of the site. This is where you will choose the emotion
-that you will then take you to the curated list of media for said emotion! Sit back
-relax and enjoy.
-
 ## Favorites
 
-With Felix you can create an account and it will allow you the option to save chosen
-pieces of media as a favorite for quick and easy access!
+Create an account and save your favorites.
 
 ![REGISTER](https://felixgroupmern.s3.amazonaws.com/REGISTER.png)
 
