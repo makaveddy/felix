@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// const mongoose = require("mongoose");
-// const mongo = require("mongodb");
 const Favorite = require("../../models/Favorite");
 
 router.post("/", (req, res) => {
