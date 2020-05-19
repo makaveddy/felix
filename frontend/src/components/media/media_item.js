@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import Logo from "./felix_logo.png";
 import './media_item.css';
 import ReactPlayer from 'react-player';
-import ReactAudioPlayer from 'react-audio-player';
+// import ReactAudioPlayer from 'react-audio-player';
 
 class MediaItem extends React.Component {
   constructor(props) {
@@ -31,7 +29,6 @@ class MediaItem extends React.Component {
     if (contentIds.includes(contentId)) {
       const index = contentIds.indexOf(contentId);
       this.props.removeFavorite(favoriteIds[index]);
-
     } else {
       this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
     };
@@ -45,7 +42,7 @@ class MediaItem extends React.Component {
       return null;
     }
     
-    const {id} = this.props.media;
+    const { id } = this.props.media;
     let contentIds = [];
 
     if (this.props.favorites) {
