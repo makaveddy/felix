@@ -27,7 +27,6 @@ class EmotionShow extends React.Component {
       return null;
     }
 
-    // debugger
     const allMedia = this.props.emotion.data.contents.map((media) => (
       <MediaItem 
       key={media.id} 

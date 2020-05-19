@@ -3,7 +3,6 @@ import Profile from "./profile";
 import { fetchFavorites, removeFavorite } from '../../actions/favorite_actions';
 
 const mapStateToProps = (state) => {
-  // debugger
   return {
     user: state.session.user,
     favorites: Object.values(state.favorites)

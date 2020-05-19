@@ -34,7 +34,6 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => (
   />
 );
 
-// Use the isAuthenitcated slice of state to determine whether a user is logged in
 
 const mapStateToProps = (state) => ({
   loggedIn: state.session.isAuthenticated
@@ -42,5 +41,4 @@ const mapStateToProps = (state) => ({
 
 
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
-
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));

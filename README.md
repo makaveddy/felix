@@ -1,54 +1,123 @@
+<div align="center">
+  <img width="50px" src="frontend/public/felix_logo.png" >
+</div>
+
+<div align="center">
+    <a href="http://app-felix.herokuapp.com/#/">Live site</a>
+</div>
+
 # Felix
-[Live site](http://app-felix.herokuapp.com)
-### Felix 
 
-![WELCOME](https://felixgroupmern.s3.amazonaws.com/WELCOME.png)
-
-Felix is a web app that provides a user a curated list of media to enjoy based on the emotion that they would like to experience. 
+Felix is a single-page app that provides curated selections of media to enjoy based on the selected emotion.
 
 ## Background and Overview
 
-For the times when you want to boost your mood or want to experience the blues then Felix is here to help. Just choose the emotion that you want to feel and Felix will give you a selection of handpicked media to get you there!
+For the times when you want to boost your mood or want to feel the blues then Felix is here to help. Just choose the emotion that you want to experience and Felix will give you a selection of handpicked media to get you there!
+
 ## Dashboard
 
 ![DASH](https://felixgroupmern.s3.amazonaws.com/new-dash.png)
 
-The dashboard is the main page of the site. This is where you will choose the emotion
-that you will then take you to the curated list of media for said emotion! Sit back
-relax and enjoy.
+## Rendering media
 
-## Favorites
+```
+render () {
+  if (!this.props.favorites) {
+    return null;
+  }
+  
+  const { id } = this.props.media;
+  let contentIds = [];
 
-With Felix you can create an account and it will allow you the option to save chosen
-pieces of media as a favorite for quick and easy access!
+  if (this.props.favorites) {
+  Object.values(this.props.favorites).forEach(favorite => {
+    contentIds.push(favorite.contentId);
+  })};
 
-![REGISTER](https://felixgroupmern.s3.amazonaws.com/REGISTER.png)
+  let favoriteButton;
+  if (contentIds.includes(id)) {
+    favoriteButton = 'red';
+  } else {
+    favoriteButton = '';
+  }
 
-Make sure you are logged in when you visit Felix so you can add those favorites!
+  return (
+    <div className="media-item-container">
+      <div className="media-item-preview">
+        <ReactPlayer
+          url={this.props.media.url}
+          width="100%"
+          height="100%"
+          controls
+          volume={1}
+        />
+      </div>
 
-![LOGIN](https://felixgroupmern.s3.amazonaws.com/LOGIN.png)
+      <div className='media-item-info'>
+        <div div className="media-item-title">{this.props.media.title}</div>
+        <i onClick={this.handleFavorite} className={`far fa-heart ${favoriteButton}`}></i>
+      </div>
+    </div>
+  );
+}
+```
 
-Adding a favorite is as easy as just making the account, choosing the emotion, then just click on the heart next to 
-the media title and thats it!
+## Favoriting and Unfavoriting
+
+Create an account and tap the heart to save your favorites.
 
 ![FAVORITE](https://felixgroupmern.s3.amazonaws.com/new-fav.png)
 
-To view your favorites just navigate over to your profile page. You will see all your favorites sorted by its emotion category!
+```
+handleFavorite(e) {
+  e.preventDefault();
+  const {id, title, url, emotion} = this.props.media;
+  const userId = this.props.userId;
+  const contentId = id;
+  const contentTitle = title;
+  const contentUrl = url;
+  const contentEmotion = emotion;
+  
+  let contentIds = [];
+  let favoriteIds = [];
 
-![PROFILE](https://felixgroupmern.s3.amazonaws.com/new-profile.png)
+  Object.values(this.props.favorites).forEach(favorite => {
+    contentIds.push(favorite.contentId);
+    favoriteIds.push(favorite._id);
+  });
+  
+  if (contentIds.includes(contentId)) {
+    const index = contentIds.indexOf(contentId);
+    this.props.removeFavorite(favoriteIds[index]);
+  } else {
+    this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
+  };
+
+  e.target.classList.toggle("red");
+}
+```
 
 
-## Technologies & Technical Challenges
 
-Back end built on MongoDB to save user auth and user data.
+## Technologies
 
-  ##### Backend: MongoDB/Express
-  ##### Frontend: React/Node.js 
+- Node.js as runtime environment
+- Express.js as backend server
+- MongoDB as backend database
+- React for user interface
+- Redux for state management
+- Git for version control
 
-## Group Members 
+## Languages 
 
-[Eddy Flores (Team Lead)](https://github.com/makaveddy),
-[Vivienne Van Vliet (Flex)](https://github.com/cleopatra2035),
-[Aimy Yu (Backend Lead)](https://github.com/aimyaa),
-[Karl Fleener (Frontend Lead)](https://github.com/karlfleener)
+- JavaScript
+- HTML5
+- CSS3
+
+## The Team
+
+- [Eddy Flores - Team Lead](https://github.com/makaveddy)
+- [Aimy Yu - Backend Lead, Fullstack](https://github.com/aimyaa)
+- [Karl Fleener - Frontend Lead](https://github.com/karlfleener)
+- [Vivienne Van Vliet - Frontend Flex](https://github.com/cleopatra2035)
 

@@ -4,7 +4,6 @@ import EmotionShow from "./emotion_show";
 import { createFavorite, removeFavorite, fetchFavorites } from '../../actions/favorite_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     userId: state.session.user.id,
     emotion: state.emotions,
