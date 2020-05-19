@@ -18,24 +18,85 @@ For the times when you want to boost your mood or want to feel the blues then Fe
 
 ![DASH](https://felixgroupmern.s3.amazonaws.com/new-dash.png)
 
-## Favorites
+## Rendering media
 
-Create an account and save your favorites.
+```
+render () {
+  if (!this.props.favorites) {
+    return null;
+  }
+  
+  const { id } = this.props.media;
+  let contentIds = [];
 
-![REGISTER](https://felixgroupmern.s3.amazonaws.com/REGISTER.png)
+  if (this.props.favorites) {
+  Object.values(this.props.favorites).forEach(favorite => {
+    contentIds.push(favorite.contentId);
+  })};
 
-Make sure you are logged in when you visit Felix so you can add those favorites!
+  let favoriteButton;
+  if (contentIds.includes(id)) {
+    favoriteButton = 'red';
+  } else {
+    favoriteButton = '';
+  }
 
-![LOGIN](https://felixgroupmern.s3.amazonaws.com/LOGIN.png)
+  return (
+    <div className="media-item-container">
+      <div className="media-item-preview">
+        <ReactPlayer
+          url={this.props.media.url}
+          width="100%"
+          height="100%"
+          controls
+          volume={1}
+        />
+      </div>
 
-Adding a favorite is as easy as just making the account, choosing the emotion, then just click on the heart next to 
-the media title and thats it!
+      <div className='media-item-info'>
+        <div div className="media-item-title">{this.props.media.title}</div>
+        <i onClick={this.handleFavorite} className={`far fa-heart ${favoriteButton}`}></i>
+      </div>
+    </div>
+  );
+}
+```
+
+## Favoriting and Unfavoriting
+
+Create an account and tap the heart to save your favorites.
 
 ![FAVORITE](https://felixgroupmern.s3.amazonaws.com/new-fav.png)
 
-To view your favorites just navigate over to your profile page. You will see all your favorites sorted by its emotion category!
+```
+handleFavorite(e) {
+  e.preventDefault();
+  const {id, title, url, emotion} = this.props.media;
+  const userId = this.props.userId;
+  const contentId = id;
+  const contentTitle = title;
+  const contentUrl = url;
+  const contentEmotion = emotion;
+  
+  let contentIds = [];
+  let favoriteIds = [];
 
-![PROFILE](https://felixgroupmern.s3.amazonaws.com/new-profile.png)
+  Object.values(this.props.favorites).forEach(favorite => {
+    contentIds.push(favorite.contentId);
+    favoriteIds.push(favorite._id);
+  });
+  
+  if (contentIds.includes(contentId)) {
+    const index = contentIds.indexOf(contentId);
+    this.props.removeFavorite(favoriteIds[index]);
+  } else {
+    this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
+  };
+
+  e.target.classList.toggle("red");
+}
+```
+
 
 
 ## Technologies
