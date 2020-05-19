@@ -1,5 +1,10 @@
 # Felix
-[Live site](http://app-felix.herokuapp.com)
+[Live site](http://app-felix.herokuapp.com/#/)
+
+<div align="center">
+    <a href="http://app-felix.herokuapp.com/#/">Live site</a>
+</div>
+
 ### Felix 
 
 ![WELCOME](https://felixgroupmern.s3.amazonaws.com/WELCOME.png)
