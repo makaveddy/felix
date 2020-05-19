@@ -12,7 +12,7 @@ Felix is a single-page app that provides curated selections of media to enjoy ba
 
 ## Background and Overview
 
-For the times when you want to boost your mood or want to experience the blues then Felix is here to help. Just choose the emotion that you want to feel and Felix will give you a selection of handpicked media to get you there!
+For the times when you want to boost your mood or want to feel the blues then Felix is here to help. Just choose the emotion that you want to experience and Felix will give you a selection of handpicked media to get you there!
 
 ## Dashboard
 
