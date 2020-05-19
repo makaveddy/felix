@@ -23,28 +23,23 @@ class MediaItem extends React.Component {
     let contentIds = [];
     let favoriteIds = [];
 
-    // console.log(Object.values(this.props.favorites));
-    // console.log(this.props.favorites);
-    let favorites = this.props.favorites;
-    // this.props.removeFavorite("5ec2b015bb6ed41e56cf47ef")
-    // this.props.removeFavorite("5ec2b034bb6ed41e56cf47f0")
-    debugger
+    // debugger
 
-    favorites.forEach(favorite => {
+    Object.values(this.props.favorites).forEach(favorite => {
       contentIds.push(favorite.contentId);
       favoriteIds.push(favorite._id);
-      debugger
+      // debugger
     });
     
     // console.log(contentIds)
     if (contentIds.includes(contentId)) {
       const index = contentIds.indexOf(contentId);
-      debugger
+      // debugger
       this.props.removeFavorite(favoriteIds[index]);
 
     } else {
       this.props.createFavorite({ userId, contentId, contentTitle, contentEmotion, contentUrl});
-      debugger
+      // debugger
     };
 
     e.target.classList.toggle("red");
@@ -59,9 +54,9 @@ class MediaItem extends React.Component {
     const {id} = this.props.media;
     let contentIds = [];
 
-    debugger
-    if (this.props.favorites[0]) {
-    Object.values(this.props.favorites[0]).forEach(favorite => {
+    // debugger
+    if (this.props.favorites) {
+    Object.values(this.props.favorites).forEach(favorite => {
       contentIds.push(favorite.contentId);
     })};
 

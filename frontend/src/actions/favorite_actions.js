@@ -26,14 +26,14 @@ export const createFavorite = data => dispatch => {
 };
 
 export const removeFavorite = favoriteId => dispatch => {
-  debugger
+  // debugger
   return APIUtil.removeFavorite(favoriteId)
   .then(favorite => (dispatch(deleteFavorite(favorite.data._id))))
   .catch(err => console.log(err))
 };
 
 export const fetchFavorites = userId => dispatch => {
-  debugger
+  // debugger
   return APIUtil.fetchFavorites(userId)
   .then(favorites => dispatch(receiveUserFavorites(favorites)))
   .catch(err => console.log(err))

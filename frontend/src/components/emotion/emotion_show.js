@@ -25,9 +25,9 @@ class EmotionShow extends React.Component {
 
     if (typeof this.props.emotion.data.contents === "undefined") {
       return null;
-    } 
+    }
 
-    debugger
+    // debugger
     const allMedia = this.props.emotion.data.contents.map((media) => (
       <MediaItem 
       key={media.id} 
@@ -35,7 +35,7 @@ class EmotionShow extends React.Component {
       createFavorite={this.props.createFavorite} 
       removeFavorite={this.props.removeFavorite} 
       userId={this.props.userId} 
-      favorites={this.props.favorites} 
+      favorites={this.props.favorites[0]} 
       />
       ));
 
