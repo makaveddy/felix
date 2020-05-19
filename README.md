@@ -8,9 +8,7 @@
 
 # Felix
 
-![WELCOME](https://felixgroupmern.s3.amazonaws.com/WELCOME.png)
-
-Felix is a web app that provides a user a curated list of media to enjoy based on the emotion that they would like to experience. 
+Felix is a single-page app that provides curated selections of media to enjoy based on the selected emotion.
 
 ## Background and Overview
 
