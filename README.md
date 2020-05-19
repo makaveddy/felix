@@ -53,10 +53,10 @@ To view your favorites just navigate over to your profile page. You will see all
 - HTML5
 - CSS3
 
-## Group Members 
+## The Team
 
-[Eddy Flores (Team Lead)](https://github.com/makaveddy),
-[Vivienne Van Vliet (Flex)](https://github.com/cleopatra2035),
-[Aimy Yu (Backend Lead)](https://github.com/aimyaa),
-[Karl Fleener (Frontend Lead)](https://github.com/karlfleener)
+- [Eddy Flores - Team Lead](https://github.com/makaveddy)
+- [Aimy Yu - Backend Lead, Fullstack](https://github.com/aimyaa)
+- [Karl Fleener - Frontend Lead](https://github.com/karlfleener)
+- [Vivienne Van Vliet - Frontend Flex](https://github.com/cleopatra2035)
 
