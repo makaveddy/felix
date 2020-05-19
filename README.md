@@ -38,12 +38,20 @@ To view your favorites just navigate over to your profile page. You will see all
 ![PROFILE](https://felixgroupmern.s3.amazonaws.com/new-profile.png)
 
 
-## Technologies & Technical Challenges
+## Technologies
 
-Back end built on MongoDB to save user auth and user data.
+- Node.js as runtime environment
+- Express.js as backend server
+- MongoDB as backend database
+- React for user interface
+- Redux for state management
+- Git for version control
 
-  ##### Backend: MongoDB/Express
-  ##### Frontend: React/Node.js 
+## Languages 
+
+- JavaScript
+- HTML5
+- CSS3
 
 ## Group Members 
 
