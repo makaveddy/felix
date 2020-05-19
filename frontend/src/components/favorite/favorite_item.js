@@ -19,7 +19,6 @@ class FavoriteItem extends React.Component {
 
   render () {
 
-
     return (
       <div className="favorite-item-container">
         <div className="favorite-item-preview">

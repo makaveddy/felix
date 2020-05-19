@@ -4,7 +4,6 @@ import MediaShow from "./media_show";
 import { closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     
   };

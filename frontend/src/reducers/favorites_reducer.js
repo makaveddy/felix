@@ -5,12 +5,12 @@ export default ( state = {}, action ) => {
 
   switch (action.type) {
     case ADD_FAVORITE:
-      return Object.assign({}, state, {
-        [action.favorite.data._id]: action.favorite,
-      });
+      // debugger
+      return Object.assign({}, state, state.data[action.favorite.data._id] = action.favorite.data);
     case DELETE_FAVORITE:
       let newState = Object.assign({}, state);
       delete newState.data[action.favoriteId];
+      // debugger
       return newState;
     case RECEIVE_USER_FAVORITES:
       return action.favorites;

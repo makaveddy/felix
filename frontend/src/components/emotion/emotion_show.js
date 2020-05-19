@@ -6,8 +6,6 @@ import './emotion_show.css';
 class EmotionShow extends React.Component {
   constructor(props) {
     super(props)
-    
-    
   }
 
   componentDidMount() {
@@ -27,18 +25,19 @@ class EmotionShow extends React.Component {
 
     if (typeof this.props.emotion.data.contents === "undefined") {
       return null;
-    } 
+    }
 
+    // debugger
     const allMedia = this.props.emotion.data.contents.map((media) => (
       <MediaItem 
-        key={media.id} 
-        media={media} 
-        createFavorite={this.props.createFavorite} 
-        removeFavorite={this.props.removeFavorite} 
-        userId={this.props.userId} 
-        favorites={this.props.favorites} 
+      key={media.id} 
+      media={media} 
+      createFavorite={this.props.createFavorite} 
+      removeFavorite={this.props.removeFavorite} 
+      userId={this.props.userId} 
+      favorites={this.props.favorites[0]} 
       />
-    ));
+      ));
 
     return (
       <div className="emotion-show-container">
