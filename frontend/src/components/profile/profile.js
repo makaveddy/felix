@@ -25,7 +25,6 @@ class Profile extends React.Component {
     let fearfulFavorites = [];  
     let motivatedFavorites = [];  
     
-    // debugger
     const allFavorites = Object.values(this.props.favorites[0]).forEach((favorite) => {
       if (favorite.contentEmotion === "Happy") {
        happyFavorites.push( 

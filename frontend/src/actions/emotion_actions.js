@@ -26,7 +26,6 @@ export const getEmotions = () => dispatch => (
 );
 
 export const getEmotion = (emotionId) => dispatch => {
-    debugger
     return (
     APIUtil.fetchEmotion(emotionId)
     .then(emotion => dispatch(receiveEmotion(emotion)))
