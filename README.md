@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="50px" src="frontend/public/felix_logo.png" >
+  <img width="50px" src="frontend/public/felix_logo.png" alt="logo">
 </div>
 
 <div align="center">
