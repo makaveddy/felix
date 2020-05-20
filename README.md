@@ -48,19 +48,34 @@ For the times when you want to boost your mood or want to feel the blues then Fe
 
 ### User Authentication
 
+<div>
+  <img width="50%" src="read_me/session_forms.gif" alt="session forms gif">
+</div>
+
 - Visitors are prompted to sign up or log in to access content.
 - Site utilizes BCrypt for password security.
 </br></br>
 
 ### Dashboard
+
+<div>
+  <img width="75%" src="read_me/dashboard.gif" alt="dashboard gif">
+</div>
+
 - The dashboard displays emotions to choose from.
 </br></br>
 
 ### Media Content
+
+<div>
+  <img width="75%" src="read_me/emotion_content.png" alt="media content screenshot">
+</div>
+
 - Each emotion has its own associated media.
 </br></br>
 
 ### Favorites
+
 - Users can save their favorite media items to their profile. 
 </br></br>
 
@@ -115,6 +130,11 @@ render () {
 </br>
 
 ### Favoriting and unfavoriting
+
+<div>
+  <img width="75%" src="read_me/handleFavorite.gif" alt="handleFavorite gif">
+</div>
+
 - Tap the heart to add a favorite and untap to remove it.
 
 
@@ -148,6 +168,7 @@ handleFavorite(e) {
   e.target.classList.toggle("red");
 }
 ```
+</br>
 
 ## The Team
 
