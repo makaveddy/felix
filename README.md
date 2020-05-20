@@ -20,7 +20,7 @@ For the times when you want to boost your mood or want to feel the blues then Fe
 
 ## Rendering media
 
-```
+```JavaScript
 render () {
   if (!this.props.favorites) {
     return null;
@@ -68,7 +68,7 @@ Create an account and tap the heart to save your favorites.
 
 ![FAVORITE](https://felixgroupmern.s3.amazonaws.com/new-fav.png)
 
-```
+```JavaScript
 handleFavorite(e) {
   e.preventDefault();
   const {id, title, url, emotion} = this.props.media;
@@ -96,8 +96,6 @@ handleFavorite(e) {
   e.target.classList.toggle("red");
 }
 ```
-
-
 
 ## Technologies
 
