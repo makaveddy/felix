@@ -10,17 +10,68 @@
 
 Felix is a single-page app that provides curated selections of media to enjoy based on the selected emotion.
 
+## Table of Contents
+
+- [Background and Overview](#background-and-overview)
+- [Technologies](#technologies)
+- [Languages](#languages)
+- [Features](#features)
+  * [User Authentication](#user-authentication)
+  * [Dashboard](#dashboard)
+  * [Media Content](#media-content)
+  * [Favorites](#favorites)
+- [Code Highlights](#code-highlights)
+  *  [Rendering media](#rendering-media)
+  *  [Favoriting and unfavoriting](#favoriting-and-unfavoriting)
+- [The Team](#the-team)
+
 ## Background and Overview
 
 For the times when you want to boost your mood or want to feel the blues then Felix is here to help. Just choose the emotion that you want to experience and Felix will give you a selection of handpicked media to get you there!
 
-## Dashboard
+## Technologies
 
-![DASH](https://felixgroupmern.s3.amazonaws.com/new-dash.png)
+- Node.js as runtime environment
+- Express.js as backend server
+- MongoDB as backend database
+- React for user interface
+- Redux for state management
+- Git for version control
 
-## Rendering media
+## Languages 
 
+- JavaScript
+- HTML5
+- CSS3
+
+## Features 
+
+### User Authentication
+
+- Visitors are prompted to sign up or log in to access content.
+- Site utilizes BCrypt for password security.
+</br></br>
+
+### Dashboard
+- The dashboard displays emotions to choose from.
+</br></br>
+
+### Media Content
+- Each emotion has its own associated media.
+</br></br>
+
+### Favorites
+- Users can save their favorite media items to their profile. 
+</br></br>
+
+## Code Highlights
+
+### Rendering media
+
+- Each media item renders a ReactPlayer component with the option to be favorited.
 ```JavaScript
+// media_item.js
+
 render () {
   if (!this.props.favorites) {
     return null;
@@ -61,14 +112,15 @@ render () {
   );
 }
 ```
+</br>
 
-## Favoriting and Unfavoriting
+### Favoriting and unfavoriting
+- Tap the heart to add a favorite and untap to remove it.
 
-Create an account and tap the heart to save your favorites.
-
-![FAVORITE](https://felixgroupmern.s3.amazonaws.com/new-fav.png)
 
 ```JavaScript
+// media_item.js 
+
 handleFavorite(e) {
   e.preventDefault();
   const {id, title, url, emotion} = this.props.media;
@@ -97,25 +149,12 @@ handleFavorite(e) {
 }
 ```
 
-## Technologies
-
-- Node.js as runtime environment
-- Express.js as backend server
-- MongoDB as backend database
-- React for user interface
-- Redux for state management
-- Git for version control
-
-## Languages 
-
-- JavaScript
-- HTML5
-- CSS3
-
 ## The Team
 
 - [Eddy Flores - Team Lead](https://github.com/makaveddy)
 - [Aimy Yu - Backend Lead, Fullstack](https://github.com/aimyaa)
 - [Karl Fleener - Frontend Lead](https://github.com/karlfleener)
 - [Vivienne Van Vliet - Frontend Flex](https://github.com/cleopatra2035)
+
+
 
