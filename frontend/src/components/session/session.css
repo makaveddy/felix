@@ -71,6 +71,9 @@
 .session-links {
   position: absolute;
   bottom: 8px;
+}
+
+.session-links > a {
   font-size: 12px;
   font-weight: 500;
 }
