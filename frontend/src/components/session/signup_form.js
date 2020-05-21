@@ -109,7 +109,10 @@ class SignupForm extends React.Component {
             </Link>
           </div>
         </form>
-        <a href="https://github.com/makaveddy/felix" target='_blank' className="session-links">GitHub</a>
+        <div className="session-links">
+          <Link to="/team">Team</Link>
+          <a href="https://github.com/makaveddy/felix" target='_blank'>GitHub</a>
+        </div>
       </div>
     );
   }
