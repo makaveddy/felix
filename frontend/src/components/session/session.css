@@ -36,6 +36,13 @@
   padding-bottom: 8px;
 }
 
+.session-form-header p {
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 .session-form-content h1 {
   font-size: 32px;
   font-weight: 500;
