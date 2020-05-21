@@ -56,12 +56,12 @@
   padding: 12px;
 }
 
-p {
+.member-details p {
   width: 100%;
   padding: 12px;
   line-height: 1.5;
   font-weight: 200;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .social-links {
