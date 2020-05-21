@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="50px" src="frontend/public/felix_logo.png" >
+  <img width="50px" src="frontend/public/felix_logo.png" alt="logo">
 </div>
 
 <div align="center">
@@ -10,17 +10,83 @@
 
 Felix is a single-page app that provides curated selections of media to enjoy based on the selected emotion.
 
+## Table of Contents
+
+- [Background and Overview](#background-and-overview)
+- [Technologies](#technologies)
+- [Languages](#languages)
+- [Features](#features)
+  * [User Authentication](#user-authentication)
+  * [Dashboard](#dashboard)
+  * [Media Content](#media-content)
+  * [Favorites](#favorites)
+- [Code Highlights](#code-highlights)
+  *  [Rendering media](#rendering-media)
+  *  [Favoriting and unfavoriting](#favoriting-and-unfavoriting)
+- [The Team](#the-team)
+
 ## Background and Overview
 
 For the times when you want to boost your mood or want to feel the blues then Felix is here to help. Just choose the emotion that you want to experience and Felix will give you a selection of handpicked media to get you there!
 
-## Dashboard
+## Technologies
 
-![DASH](https://felixgroupmern.s3.amazonaws.com/new-dash.png)
+- Node.js as runtime environment
+- Express.js as backend server
+- MongoDB as backend database
+- React for user interface
+- Redux for state management
+- Git for version control
 
-## Rendering media
+## Languages 
 
+- JavaScript
+- HTML5
+- CSS3
+
+## Features 
+
+### User Authentication
+
+<div>
+  <img width="50%" src="read_me/session_forms.gif" alt="session forms gif">
+</div>
+
+- Visitors are prompted to sign up or log in to access content.
+- Site utilizes BCrypt for password security.
+</br></br>
+
+### Dashboard
+
+<div>
+  <img width="75%" src="read_me/dashboard.gif" alt="dashboard gif">
+</div>
+
+- The dashboard displays emotions to choose from.
+</br></br>
+
+### Media Content
+
+<div>
+  <img width="75%" src="read_me/emotion_content.png" alt="media content screenshot">
+</div>
+
+- Each emotion has its own associated media.
+</br></br>
+
+### Favorites
+
+- Users can save their favorite media items to their profile. 
+</br></br>
+
+## Code Highlights
+
+### Rendering media
+
+- Each media item renders a ReactPlayer component with the option to be favorited.
 ```JavaScript
+// media_item.js
+
 render () {
   if (!this.props.favorites) {
     return null;
@@ -61,14 +127,20 @@ render () {
   );
 }
 ```
+</br>
 
-## Favoriting and Unfavoriting
+### Favoriting and unfavoriting
 
-Create an account and tap the heart to save your favorites.
+<div>
+  <img width="75%" src="read_me/handleFavorite.gif" alt="handleFavorite gif">
+</div>
 
-![FAVORITE](https://felixgroupmern.s3.amazonaws.com/new-fav.png)
+- Tap the heart to add a favorite and untap to remove it.
+
 
 ```JavaScript
+// media_item.js 
+
 handleFavorite(e) {
   e.preventDefault();
   const {id, title, url, emotion} = this.props.media;
@@ -96,21 +168,7 @@ handleFavorite(e) {
   e.target.classList.toggle("red");
 }
 ```
-
-## Technologies
-
-- Node.js as runtime environment
-- Express.js as backend server
-- MongoDB as backend database
-- React for user interface
-- Redux for state management
-- Git for version control
-
-## Languages 
-
-- JavaScript
-- HTML5
-- CSS3
+</br>
 
 ## The Team
 
@@ -118,4 +176,6 @@ handleFavorite(e) {
 - [Aimy Yu - Backend Lead, Fullstack](https://github.com/aimyaa)
 - [Karl Fleener - Frontend Lead](https://github.com/karlfleener)
 - [Vivienne Van Vliet - Frontend Flex](https://github.com/cleopatra2035)
+
+
 
