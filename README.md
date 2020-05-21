@@ -8,7 +8,7 @@
 
 # Felix
 
-Felix is a single-page app that provides curated selections of media to enjoy based on the selected emotion.
+Felix is an emotion-based media curation app.
 
 ## Table of Contents
 
@@ -49,7 +49,7 @@ For the times when you want to boost your mood or want to feel the blues then Fe
 ### User Authentication
 
 <div>
-  <img width="50%" src="read_me/session_forms.gif" alt="session forms gif">
+  <img width="30%" src="read_me/session_forms.gif" alt="session forms gif">
 </div>
 
 - Visitors are prompted to sign up or log in to access content.
