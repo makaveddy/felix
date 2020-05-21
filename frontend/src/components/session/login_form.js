@@ -74,6 +74,7 @@ class LoginForm extends React.Component {
             <header className="session-form-header">
               <img src={Logo} alt="Felix logo" className="logo" />
               <h1>Welcome to Felix</h1>
+              <p>An emotion-based media curation app</p>
             </header>
 
             <input
